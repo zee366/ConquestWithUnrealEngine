@@ -23,6 +23,7 @@ bool Graph::BreadthFirstSearch(int root) {
 	while (!openList.empty()) {
 		currentVertex = openList.front();
 		visited[currentVertex] = true;
+		openList.pop();
 
 		for (auto vertex : mAdjacencyMatrix[currentVertex])
 			if (!visited[vertex])
